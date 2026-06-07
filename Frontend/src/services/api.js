@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://ai-planner-3nlc.onrender.com';
 
 const getUserId = () => localStorage.getItem('userId');
 
