@@ -9,7 +9,13 @@ dotenv.config();
 const app = express();
 
 // Middleware 
-app.use(cors({ origin: 'http://localhost:5173' })); // Explicitly allow Vite Client access
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://ai-planner-tau.vercel.app' // ◄ Make sure this exact link is here!
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes Integration Layer
